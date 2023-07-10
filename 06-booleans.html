@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+</head>
+<body>
+    <script>
+        true
+        false
+
+        /* console.log(3 < 5); 
+
+        console.log(5 === '5.00');
+
+        if (false) {
+            console.log(`hello`);
+        } else {
+            console.log(`else`);
+        }
+
+        const age = 15;
+
+        if (age >= 16) {
+            console.log(`you can drive`);
+        } else if (age >= 14) {
+            console.log(`Almost there`);
+        } else {
+            console.log(`you can not drive`);
+        }
+        */
+        
+        // TRUTHY and FALTHY values 
+
+        // Any value is TRUTHY except: false 0 '' NaN undefined null
+
+        /*
+
+        const cartQuantity = 5;
+
+        if (cartQuantity) {
+            console.log('Cart has products');
+        };
+
+        console.log(!0); // true
+        
+        console.log('text' / 5); // NaN
+
+        let variable1;
+        const variable2 = undefined; // using 'const' we need to directly write 'undefined'
+        console.log(variable1);
+*/
+
+        // Shortcuts for if-statements
+
+        // Ternary operator ?:
+        // Guard operator &&
+        // Default operator ||
+
+        const result = true ? 'truthy' : 'falthy' ;
+        console.log(result);
+        //basic way
+        let result2;
+        if (true) {
+            result2 = 'truthy';
+        } else {
+            result2 = 'falthy';
+        }
+        console.log(result2);
+
+
+        false && console.log('Hello');
+        //basic way
+        if(true) {
+            console.log('Hello');
+        } ;
+
+        const message = 5 && 'Hello';
+        console.log(message);
+        // basic way
+        let message2;
+        if (5) {
+            message2 = 'Hello';
+        };
+        console.log(message2);
+
+        const currency = 'EUR' || 'USD';
+        const currency2 = undefined || 'USD';
+        console.log(currency); //'EUR'
+        console.log(currency2); //'USD'
+
+        
+
+    </script>
+</body>
+
+</html>

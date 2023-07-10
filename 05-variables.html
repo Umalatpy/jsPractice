@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <p>My diner</p>
+    <button onclick="
+        coffee += 5;
+        console.log(coffee);
+    ">Order coffee </button>
+
+    <button onclick="
+        bagel +=3;
+        console.log(bagel);
+    ">Order bagel</button>
+    <button onclick="
+        soup +=9;
+        console.log(soup);
+    ">Order soup</button>
+    <button onclick="
+        totalCost = coffee + bagel + soup + (coffee + bagel + soup)*0.1;
+        console.log(`Total cost of diner is ${totalCost} $ with 10% taxes.`);
+        tax = (coffee + bagel + soup)*0.1;
+        console.log(`Tax(10%): ${tax} $`);
+        alert(`Total cost of diner is ${totalCost} $ with 10% taxes.`);
+    ">Total Cost</button>
+    <button onclick="
+        coffee = 0;
+        bagel = 0;
+        soup = 0;
+        totalCost = coffee + bagel + soup + (coffee + bagel + soup)*0.1;
+        console.log(`You can choose again your diner. `);
+        console.log(`Total cost of diner is ${totalCost} $ for now`);
+    ">Reset Cost</button>
+
+    <script>
+        //Creating a new variable and Assigning a value to the variable
+        let variable1 = 3;
+
+        //  displaying value of variable by inserting variable inside the default JS function `console.log()`
+        console.log(variable1);
+
+        // creating another variable
+        //let calculation = 2 + 2;
+
+        // best practice of proper using of naming a variable:
+        const calculation = 2 + 2;
+
+        // we can use a variable wherever we use a value
+        console.log(calculation);
+        console.log(calculation + 2);
+        
+        // cgeating a new variable by saving inside of it the result of calculation previous variable and a number
+        const result = calculation + 2; 
+
+        // we can use a variable wherever we use a value
+        console.log(result);
+
+        // creating another variable with a string inside
+        const message = `hello`;
+        console.log(message); console.log('; ');
+
+        // Re-assigning a value to a variable or changing the value of a variable
+        variable1 = 5;
+        console.log(variable1);
+
+        variable1 = variable1 + 1;
+        console.log(variable1);
+
+        // The way of creating a variable, when we don`t plan to change its value later
+        const variable2 = 3;
+
+        // an old way of creating variable, that we don`t use in new vertions of javascript from issues coming up  using it
+        var variable3 = 3;
+        
+        // variable2 = 55; -- Re-assigning doesn`t work in this case
+        console.log(variable2);
+
+        // Use const by default
+
+        console.log(typeof 3);
+        console.log( typeof variable2);
+        console.log(typeof message);
+
+        // EXERCISES XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+        // a b
+        const name = `Umalat`;
+        console.log(`My name is ${name}`);
+
+        // c
+        let coffee = 0;
+        let bagel = 0;
+        let soup = 0;
+        let totalCost = 0;
+        let tax = 0;
+        console.log(totalCost);
+
+
+
+
+    </script>
+</body>
+</html>

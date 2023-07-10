@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <button class="js-button1" onclick="
+        document.querySelector('.js-choise').innerHTML = 'You chose: heads';
+    ">9a</button>
+
+    <button class="js-button2" onclick="
+        document.querySelector('.js-choise').innerHTML = 'You chose: tails';
+    ">9b</button>
+
+    <p class="js-choise"></p>
+
+    <input type="text" placeholder="Name" class="js-input-name" onkeydown="
+        displayByEnter (event);
+    ">
+
+    <button class="js-submit" onclick="
+            displayName();
+        ">Submit</button>
+        <p class="js-display-name" ></p>
+
+    <script>
+        console.log(document.querySelector('button')); 
+        console.log(document.querySelector('button').innerHTML); 
+
+        console.log(document.querySelector('.js-button1').innerHTML = 'Heads'); 
+
+        console.log(document.querySelector('.js-button2').innerHTML = 'Tails'); 
+
+        function displayName () {
+            const name = document.querySelector('.js-input-name');
+            let nameText = name.value;
+            document.querySelector('.js-display-name').innerHTML = `Your name is ${nameText}`
+        };
+
+        function displayByEnter (event) {
+            if (event.key === 'Enter') {
+                displayName ();
+            }
+        };
+
+        //Algorithm
+        // When clicking submit:
+        // 1. get the value of input
+        // 2. display text on page including inputted name 
+
+    </script>
+</body>
+</html>

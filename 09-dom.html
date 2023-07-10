@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom</title>
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-button">Second button</button>
+    <script>
+
+        /*
+
+        console.log(document.title);
+
+        document.title = 'Changed';
+
+        console.log(document.title);
+
+        document.body.innerHTML = 'hello';
+        document.title = 'good job';
+        
+
+        // The document object, as we used above, represents / models the webpage.
+        // That`s why we name it Document Object Model DOM 
+
+        // document generally is just an object, that contains properties like
+        // 'body' and 'title'. we can access them using dot-notation
+
+        // the special thing about the document object is that it is linked to the 
+        // webpage, that means if we change certain properties in this object
+        // it will also change the webpage
+
+        // document object also has methods like: document.querySelector('button');
+
+        console.log(document.body);
+
+        // DOM combines HTML and JS together and gives to JS controle of the webpage
+        
+        //HTML element is converted into s JS object
+
+        console.log(typeof document.body);
+
+        console.log(document.body.innerHTML); 
+
+        // document.body.innerHTML = 'Changed';
+
+        document.body.innerHTML = '<button>Good job</button>';
+
+        */
+
+        // method = function saved inside an object
+        // document.querySelector() - a very important method 
+        // it lets us get ANY ELEMENT from the page and put it inside JS
+
+        console.log(document.querySelector('button')); 
+
+        //every HTML element has a property .innerHTML
+
+        console.log(document.querySelector('button').innerHTML);
+
+        document.querySelector('button').innerHTML = 'Changed';
+
+        console.log(document.querySelector('.js-button'));
+
+        //document.querySelector('.js-button').innerHTML = 'Changed by class';
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+
+    </script>
+</body>
+</html>
