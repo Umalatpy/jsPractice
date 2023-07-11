@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+    margin-left: 50px;
+}
+.js-display{
+    display: inline-block;
+    min-width: 270px;
+    min-height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size: 30px;
+    border: 1px solid rgb(41, 41, 41);
+}
+button{
+    margin-right: 8px;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    transition: ease 0.3s;
+    cursor: pointer;
+}
+button:hover{
+    transition: ease 0.3s;
+    background-color: #5f8143;
+}
+button:active{
+    transition: ease 0.1s;
+    background-color: red;
+}
+
+.clear-button{
+    font-size: 18px;
+    padding-left: 7px;
+}
+
+.operation{
+    background-color: rgb(255, 166, 0);
+}
+.js-change-color{
+    transition: ease 0.3s;
+    background-color: green;
+}
