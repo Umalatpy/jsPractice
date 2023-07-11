@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dom Projects</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+
+        .subscribe-button {
+            border: none;
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .is-subscribed{
+            background-color: rgb(240, 240, 240);
+            color: black;
+        }
+
+        .cost-input {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        .calculate-button {
+            background-color: green;
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 12px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p>Youtube Subscribe button</p>
+    <button class="js-subscribe-button subscribe-button" onclick="
+    subscribe();
+    ">Subscribe</button>
+
+    <p>Rock Paper Scissors</p>
+    <a href="#">Click here</a>
+    <br>
+    <br>
+    <br>
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+
+    <!-- clicks and keydowns are known as events,
+        onclick and onkeydown are known as event listeners,
+        they chek for events and runs JS when those events happen
+        (inside 'onkeydown' we use special object called "event",
+        it contains the information about the event.)
+        every event listener gets an event object.
+        event object has a bunch of information including - key: "5" that we typed,
+        so we can use it to determine which button was pressed on the keyboard-->
+
+    <input class="js-cost-input cost-input" placeholder="Cost of order" onkeydown="
+    handleCostKeydown(event);
+    ">
+
+    <button class="calculate-button" onclick="
+        calculateTotal ();
+        
+    ">Calculate</button>
+
+    <p class="js-total-cost"></p>
+    <br>
+    <br>
+    <br>
+    <a href="#">CSS version of these projects</a>
+    <script>
+        //DO NOT DO MATH USING STRINGS
+        String(25);
+        console.log(`25` - 5);
+        console.log(`25` + 5);
+
+        function handleCostKeydown(event) {
+            if (event.key === 'Enter') {
+            calculateTotal();
+            }
+        }
+
+        function subscribe() {
+            const buttonElement = document.querySelector('.js-subscribe-button');
+            if (buttonElement.innerText === 'Subscribe') {buttonElement
+                .innerHTML = 'Subscribed';
+                buttonElement.classList.add
+                ('is-subscribed');
+                } else {
+                buttonElement.innerHTML = 'Subscribe';
+                buttonElement.classList.remove
+                ('is-subscribed');
+                }
+        }
+
+        //Algorithm
+        //Whem we click the button:
+        // 1. Get the text in the text box
+        // 2. If amount < $40, add $10
+        // 3. Display total on the page
+
+        function calculateTotal () {
+            const inputElement = document.querySelector('.js-cost-input');
+// Whenever we get a value from the DOM, the value will be a string
+// so we use the built-in JS function Number() to convert string to number
+// so that we could calculate the numbers later
+            let cost = Number(inputElement.value);
+            if (cost < 40 ) {
+                cost += 10;
+            }
+            document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+        };
+
+        // Algorithm to display the total result by clicking enter on keyboard
+        // when we press a key:
+        // 1. Check if the key is 'Enter'
+        // (inside 'onkeydown' we use special object called "event",
+        // it contains the information about the event.)
+        // every event listener gets an event object
+        // event object has a bunch of information including - key: "5" that we typed
+        // so we can use it to determine which button is pressed on keyboard
+        // 2. if it is, do the same thing as the calculate button
+
+
+        // The document object represents the webpage, 
+        // the window object represents the browser
+        window.document
+        window.console.log('window');
+        // alert, console are the parts of the window
+        window.alert
+    </script>
+</body>
+</html>
