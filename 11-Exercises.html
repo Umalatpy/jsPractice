@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>11 - Exercises</title>
+</head>
+
+<body>
+    <script>
+        /*
+                const nums = [10, 20, 30];
+                const testArray = [1, 22, 36, 25, 9];
+                const testArray2 = ['hi', 'hello', 'bye', 'goodbye']
+                nums[2] = 99;
+                console.log(nums);
+        
+                //11a b
+                function getLastValue(array) {
+                    const lastIndex = array.length - 1;
+                    console.log(array[lastIndex]);
+                }
+                getLastValue([10, 20, 30]);
+                getLastValue(nums);
+                //11c
+                function arraySwap(array) {
+                    console.log(array);
+                    const lastIndex = array.length - 1;
+                    //const firstValue = array[0];
+                    array.push(array[0]);
+                    array[0] = array[lastIndex];
+                    array.splice(array.length - 2, 1);
+                    console.log(array);
+                }
+                arraySwap(testArray);
+                arraySwap(nums);
+                arraySwap(testArray2);
+        
+                //11d
+                for (let i = 0; i <= 10; i += 2) {
+                    console.log(i);
+                }
+        
+                //11e
+                for (let i = 5; i >= 0; i--) {
+                    console.log(i);
+                }
+        
+                //11f
+                let i = 0;
+                while (i < 10) {
+                    i += 2;
+                    console.log(i);
+                }
+                let index = 6;
+                while (index > 0) {
+                    index--;
+                    console.log(index);
+                }
+        
+        //11g
+        array = [1, 2]
+        newArray = [];
+        for (i = 0; i < array.length; i++) {
+            const value = array[i];
+            newArray.push(value + 1);
+        }
+        console.log(newArray);
+        //11h
+        newArray = [];
+        anArray = [2, 3, 6, 5, 44]
+        function addOne(array) {
+            for (i = 0; i < array.length; i++) {
+                const value = array[i];
+                newArray.push(value + 1);
+            }
+            console.log(array);
+            console.log(newArray);
+        }
+        addOne(anArray);
+
+//11i
+        newArray = [];
+        anArray = [2, 3, 6, 5, 44]
+        function addNum(array, num) {
+            for (i = 0; i < array.length; i++) {
+                const valueInArray = array[i];
+                newArray.push(valueInArray + num);
+            }
+            console.log(array);
+            console.log(newArray);
+        }
+        addNum(anArray, 5);
+
+        //11j
+        arrayResult = [];
+        arrayResult2 = [];
+        anArray = [2, 3, 6, 5, 44];
+        anArray2 = [-3, -4, -7, -6, -45]
+        anArray3 = [10, 20, 30, 40, 50, 60, 70, 80]
+        function addArrays(array1, array2) {
+            for (i = 0; i < array1.length; i++) {
+                const value1 = array1[i];
+                arrayResult.push(value1);
+            }
+            console.log(arrayResult);
+
+            for (i = 0; i < array2.length; i++) {
+                const value2 = array2[i];
+                arrayResult2.push(arrayResult[i] + value2);
+            }
+            for (i = arrayResult2.length; i >= 0; i--) {
+                if (!arrayResult2[i]) {
+                    arrayResult2.splice(i, 1);
+                    // console.log(arrayResult2);
+                }
+            }
+            console.log(arrayResult2);
+        }
+        addArrays(anArray, anArray3);
+
+        //11k
+        anArray2 = [-3, 4, -7, 6, 45]
+        numsPositive = []
+        function countPositive(nums) {
+            for (i = 0; i < nums.length; i++) {
+                const value = nums[i];
+                if (value >= 0) {
+                    //console.log(value);
+                    numsPositive.push(value);
+                    //console.log(numsPositive)
+                }
+            }
+            console.log(numsPositive.length);
+        }
+        countPositive(anArray2)
+        //11l
+
+        anArray2 = [95, 100, -3, 4, 97, -7, 6, 45, 90, 102]
+
+        resultMaxArray = []
+        function minMax(nums) {
+            let result = {
+                min: null,
+                max: null
+            }
+            if (nums.length === 1) {
+                result.min = nums[0];
+                result.max = nums[0];
+                return console.log(result);
+            }
+            for (i = 0; i < nums.length; i++) {
+                const num = nums[i];
+                if (!nums[i]) {
+                    return result;
+                }
+                if (num < result.min) {
+                    result.min = num;
+                };
+                if (num > result.max) {
+                    result.max = num;
+                };
+            }
+            console.log(result);
+        }
+        minMax(anArray2)
+        minMax([5])
+        minMax([])
+        */
+        //11n
+
+        function countWords(words) {
+            const result = {};
+
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+
+                // result[word] adds/accesses a property using whatever is
+                // saved inside the 'word' variable.
+                // If word = 'apple', result[word] will do result['apple']
+                // If word = 'grape', result[word] will do result['grape']
+                if (!result[word]) {
+                    result[word] = 1;
+                } else {
+                    result[word]++;
+                }
+            }
+
+            return result;
+        }
+
+        console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+    </script>
+</body>
+
+</html>
