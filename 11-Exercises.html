@@ -241,23 +241,90 @@
             console.log(removed);
         }
         removeEggs(strings1)
-        */
+        
 
         //11s
         strings1 = ['hello', 'egg', 'egg', 'world', 'search', 'egg', 'good', 'search']
         function removeEggs(foods) {
+            let eggsRemoved = 0;
             removed = [];
             for (let i = 0; i < foods.length; i++) {
                 const food = foods[i];
-                if (food === 'egg') {
+                if (food === 'egg' && eggsRemoved < 2) {
+                    eggsRemoved++
                     continue;
                 } else {
                     removed.push(food);
                 }
             }
-            console.log(removed);
+            //console.log(removed);
+            return removed;
         }
-        removeEggs(strings1)
+        //removeEggs(strings1);
+        console.log(removeEggs(strings1));
+        
+        //11t
+        strings1 = ['hello', 'egg', 'egg', 'world', 'search', 'egg', 'good', 'search']
+        function removeEggs(foods) {
+            let eggsRemoved = 0;
+            removed = [];
+            foods.reverse();
+            for (let i = 0; i < foods.length; i++) {
+                const food = foods[i];
+                if (food === 'egg' && eggsRemoved < 2) {
+                    eggsRemoved++
+                    continue;
+                } else {
+                    removed.push(food);
+                }
+            }
+            //console.log(removed);
+            removed.reverse();
+            return removed;
+        }
+        //removeEggs(strings1);
+        console.log(removeEggs(strings1));
+        
+        //11u
+        strings1 = ['hello', 'egg', 'egg', 'world', 'search', 'egg', 'good', 'search']
+        function removeEggs(foods) {
+            let eggsRemoved = 0;
+            removed = [];
+            const newFoods = foods.slice();
+            newFoods.reverse();
+            for (let i = 0; i < newFoods.length; i++) {
+                const food = newFoods[i];
+                if (food === 'egg' && eggsRemoved < 2) {
+                    eggsRemoved++
+                    continue;
+                } else {
+                    removed.push(food);
+                }
+            }
+            //console.log(removed);
+            removed.reverse();
+            return removed;
+        }
+        //removeEggs(strings1);
+        console.log(removeEggs(strings1));
+        console.log(strings1);
+        */
+        //11v
+        for (let i = 1; i <= 20; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                console.log('FizzBuzz');
+                continue;
+            }
+            if (i % 3 === 0) {
+                console.log('Fizz');
+                continue;
+            }
+            if (i % 5 === 0) {
+                console.log('Buzz');
+                continue;
+            }
+            console.log(i);
+        }
 
     </script>
 </body>
