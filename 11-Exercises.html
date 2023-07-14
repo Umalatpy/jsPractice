@@ -165,7 +165,7 @@
         minMax(anArray2)
         minMax([5])
         minMax([])
-        */
+        
         //11n
 
         function countWords(words) {
@@ -189,6 +189,76 @@
         }
 
         console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+        
+        //11o
+        strings1 = ['hello', 'world', 'search', 'good', 'search']
+        strings2 = ['not', 'found']
+
+        function findSearch(array) {
+            for (let i = 0; i < array.length; i++) {
+                const string = array[i];
+                if (string === 'search') {
+                    return console.log(i);
+                }
+                if (string !== 'search') {
+                    continue;
+                }
+            }
+            console.log(-1);
+        }
+        findSearch(strings1)
+        findSearch(strings2)
+
+        //11q
+        strings1 = ['hello', 'world', 'search', 'good', 'search']
+        strings2 = ['not', 'found']
+        function findIndex(array, word) {
+            for (let i = 0; i < array.length; i++) {
+                const element = array[i];
+                if (element === word) {
+                    return console.log([i]);
+                } if (element !== word) {
+                    continue;
+                }
+            }
+            console.log('-1');
+        }
+        findIndex(strings1, 'search')
+        findIndex(strings2, 'search')
+        
+        //11r
+        strings1 = ['hello', 'egg', 'egg', 'world', 'search', 'good', 'search']
+        function removeEggs(foods) {
+            removed = [];
+            for (let i = 0; i < foods.length; i++) {
+                const food = foods[i];
+                if (food === 'egg') {
+                    continue;
+                } else {
+                    removed.push(food);
+                }
+            }
+            console.log(removed);
+        }
+        removeEggs(strings1)
+        */
+
+        //11s
+        strings1 = ['hello', 'egg', 'egg', 'world', 'search', 'egg', 'good', 'search']
+        function removeEggs(foods) {
+            removed = [];
+            for (let i = 0; i < foods.length; i++) {
+                const food = foods[i];
+                if (food === 'egg') {
+                    continue;
+                } else {
+                    removed.push(food);
+                }
+            }
+            console.log(removed);
+        }
+        removeEggs(strings1)
+
     </script>
 </body>
 
