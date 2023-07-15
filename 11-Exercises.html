@@ -308,7 +308,7 @@
         //removeEggs(strings1);
         console.log(removeEggs(strings1));
         console.log(strings1);
-        */
+        
         //11v
         for (let i = 1; i <= 20; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
@@ -325,7 +325,37 @@
             }
             console.log(i);
         }
+*/
+        //11w
 
+        strings1 = ['hello', 'world', 'search', 'good', 'search']
+        strings2 = ['not', 'found']
+
+        function findIndex(array, word) {
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] === word) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        console.log(findIndex(strings1, 'search'));
+        console.log(findIndex(strings2, 'search'));
+
+        function unique(array) {
+            const result = [];
+
+            for (let i = 0; i < array.length; i++) {
+                const word = array[i];
+
+                if (findIndex(result, word) === -1) {
+                    result.push(word);
+                }
+            }
+            return result;
+        }
+        console.log(unique(strings1));
     </script>
 </body>
 
