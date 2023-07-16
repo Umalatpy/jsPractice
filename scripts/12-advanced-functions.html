@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced functions</title>
+</head>
+
+<body>
+    <script>
+        /*
+        greeting();
+        function greeting() {
+            console.log('hello');// Hoisting(we can call the function
+            // before we declare it in the code page)
+        }
+        greeting();
+        // Functions are Values, so we can save
+        // a function inside a variable
+
+        const num = 2;
+        // const function1 = function greeting() {
+        //     console.log('hello2');
+        // };
+
+        console.log(function1);
+        console.log(typeof function1);
+        function1(); // we can just call the function by brackets (),
+        // so that this will run the function inside,
+        // becouse it contains a function
+        // we can access the function by this way:
+        const function1 = function () { //Here Hoisting doesn't work
+            console.log('hello2');
+        };
+        // this is called an Anomymous Function(function without a name)
+
+        // we can save function in an object
+        // const object1 = {
+        //     num: 2,
+        //     fun: function greeting() {
+        //         console.log('hello3');
+        //     }
+        // };
+        // object1.fun();
+
+        // we can write the object above by using anonymous function:
+        
+        const object1 = {
+            num: 2,
+            fun: function () {
+                console.log('hello3');
+            }
+        };
+        // we can pass a value inside a function:
+        function display(param) {
+            console.log(param);
+
+        }
+        display(2); // passing a value inside a function
+
+        function run(param) {
+            param();
+        }
+        // Passing a function into another function
+        run(function () { // this inside function is called a CALLBACK function
+            console.log('hello4');
+        });
+*/
+        // setTimeout() - allows us to run a function in the future
+
+        setTimeout(function () { // this is called ASYNCHRONOUS Code
+            // means code will not wait for a line to finish before 
+            // going to the next line
+            console.log('timeout');
+            console.log('timeout2');
+        }, 3000); // after 3 seconds it will run the code
+
+        console.log('next line'); // this code runs first
+
+
+    </script>
+</body>
+
+</html>
