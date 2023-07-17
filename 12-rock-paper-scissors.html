@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rock paper Scissors</title>
+    <link rel="stylesheet" href="styles/12-rock-paper-scissors.css">
+</head>
+
+<body>
+
+    <p class="title">Rock Paper Scissors</p>
+    <button class="move-button" onclick="
+        pickPCmove(); 
+        myMove = 'rock';
+        giveResult();
+    "> <img class="move-icon" src="images/rock-emoji.png"> </button>
+
+    <button class="move-button" onclick="
+        pickPCmove();
+        myMove = 'paper';
+        giveResult();
+    ">
+        <img class="move-icon" src="images/paper-emoji.png">
+    </button>
+
+    <button class="move-button" onclick="
+        pickPCmove();
+        myMove = 'scissors';
+        giveResult();
+    ">
+        <img class="move-icon" src="images/scissors-emoji.png">
+    </button>
+
+    <p class="js-result result">You win.</p>
+
+    <p class="js-move">
+        You
+        <img class="move-icon" src="images/rock-emoji.png">
+        <img class="move-icon" src="images/paper-emoji.png">
+        Computer
+    </p>
+
+    <p class="js-score score"></p>
+
+    <button class="reset-score" onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    document.querySelector('.js-result').innerHTML = '';
+    ">Reset Score</button>
+    <button class="auto-play-button" onclick="
+    autoPlay();
+    ">Auto play</button>
+
+    <!-- Algoritm 
+    When we click a button:
+    1. Computer randomly selects a move
+    2. Compare the moves to get the result
+    3. Update a score
+    4. Display the result and the score in a popup -->
+    <script src="scripts/12-rock-paper-scissors.js"></script>
+</body>
+
+</html>
