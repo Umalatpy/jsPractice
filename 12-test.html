@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>App</title>
+</head>
+
+<body>
+    <!-- <button onclick="changeStatus()" class="js-start-button">Start</button>
+
+    <button onclick="addMessage()" class="js-add-button">Add to cart</button>
+
+    <p class="js-message"></p> -->
+
+    <button onclick="
+    messages++; 
+    countMessages();
+    " class="js-add-button">Add</button>
+
+    <button onclick="
+    if(messages > 0) {messages--}; 
+    countMessages();
+    " class="js-remove-button">RemoveMsg</button>
+
+    <script>
+        //12g h i
+        let messages = 2;
+        let intervalId;
+        let notificationStatus;
+
+        function countMessages() {
+            if(messages > 0) {
+        displayMessage();
+            } else{
+        stopNotification();
+            }
+        };
+
+        countMessages();
+
+        function displayMessage() {
+            if(notificationStatus) {
+            return;
+            }
+            notificationStatus = true;
+            intervalId = setInterval(function() {
+            if (document.title === 'App') {
+                document.title = `(${messages}) New messages`;
+            } else {
+                document.title = 'App';
+            }
+            },1000)
+        };
+
+        function stopNotification() {
+        notificationStatus = false;
+        clearInterval(intervalId);
+        document.title = 'App';
+        }
+
+        //12a 12b
+        /*
+                const add = function () {
+                    console.log(2 + 3);
+                }
+        
+                add()
+                add()
+        
+                function runTwice(fun) {
+                    fun()
+                    fun()
+                }
+        
+                runTwice(function () { console.log('12b'); })
+                runTwice(add)
+                */
+        // 12c d e f
+        /*
+                function changeStatus() {
+                    document.querySelector('.js-start-button').innerHTML = 'Loading...';
+                    setTimeout(function () {
+                        document.querySelector('.js-start-button').innerHTML = 'Finished';
+                    }, 1000)
+                }
+        
+                let myTimeout;
+                function addMessage() {
+        
+                    const messageElement = document.querySelector('.js-message');
+                    messageElement.innerHTML = 'Added';
+        
+                    clearTimeout(myTimeout);
+        
+                    myTimeout = setTimeout(function () {
+                        document.querySelector('.js-message').innerHTML = '';
+                    }, 2000);
+                }
+        */
+        
+    </script>
+</body>
+
+</html>

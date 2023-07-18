@@ -66,23 +66,36 @@
         });
 */
         // setTimeout() - allows us to run a function in the future
+        /*
+                setTimeout(function () { // this is called ASYNCHRONOUS Code
+                    // means code will not wait for a line to finish before 
+                    // going to the next line
+                    console.log('timeout');
+                    console.log('timeout2');
+                }, 3000); // after 3 seconds it will run the code
+        
+                console.log('next line'); // this code runs first
+        
+                setInterval(function () { // Runs the function every 3 seconds and is also Asynchronous
+                    console.log('interval');
+                }, 3000); // takes two parameters the same as setTimeout() does
+        
+                console.log('next line2');
+        */
 
-        setTimeout(function () { // this is called ASYNCHRONOUS Code
-            // means code will not wait for a line to finish before 
-            // going to the next line
-            console.log('timeout');
-            console.log('timeout2');
-        }, 3000); // after 3 seconds it will run the code
-
-        console.log('next line'); // this code runs first
-
-        setInterval(function () { // Runs the function every 3 seconds and is also Asynchronous
-            console.log('interval');
-        }, 3000); // takes two parameters the same as setTimeout() does
-
-        console.log('next line2');
-
-
+        [
+            'make dinner',
+            'wash dishes',
+            'watch youtube'
+        ].forEach(function (value, index) {
+            if (value === 'wash dishes') {
+                return; // makes the same thing as 'continue' in FOR-loop
+            }
+            console.log(index);
+            console.log(value);
+        })
+        // if we need to use BREAK in our loop, then we need to use
+        // regular 'for' loop
 
     </script>
 </body>
