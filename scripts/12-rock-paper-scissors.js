@@ -50,6 +50,7 @@ function autoPlay() {
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false;
+        const playerMove = '';
     }
 
 }

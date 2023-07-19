@@ -6,57 +6,116 @@
 </head>
 
 <body>
-    <!-- <button onclick="changeStatus()" class="js-start-button">Start</button>
+    <button class="js-start-button">Start</button>
 
-    <button onclick="addMessage()" class="js-add-button">Add to cart</button>
+    <button onclick="" class="js-add-cart-button">Add to cart</button>
 
-    <p class="js-message"></p> -->
+    <p class="js-message"></p>
 
-    <button onclick="
-    messages++; 
-    countMessages();
-    " class="js-add-button">Add</button>
+    <button class="js-add-button">Add</button>
 
     <button onclick="
-    if(messages > 0) {messages--}; 
-    countMessages();
+    
     " class="js-remove-button">RemoveMsg</button>
 
     <script>
+        /*
+        //12j k l
+        // const multiply = (value1, value2) => value1 * value2;
+        // console.log(multiply(8,3));
+
+        function countPositive(nums) {
+            const newNums = [];
+            nums.forEach(value => {
+                if(value <= 0) {
+                    return;
+                } else {
+                    newNums.push(value)
+                }
+            })
+            console.log(newNums.length);
+        }
+        countPositive([-2,4,1,-3,5])
+*/
+
+        /*
+                //12m
+                const array1 = [1,2,3,5];
+                const addNum = (array, num) => array.map(value => value+num) ;
+                
+                console.log(addNum(array1, 10)); 
+                //12n
+                const foodsArray =['egg', 'apple', 'meat','egg', 'egg', 'cheese']
+                // const removeEgg = (foods) => foods
+                // .filter((value, index) => value !== 'egg' )
+                // console.log(removeEgg(foodsArray));
+                //12o
+                let eggRemoved = 0;
+                const removeEgg2 = (foods) => foods
+                .filter(value => {
+                    if ( eggRemoved < 2 && value === 'egg') {
+                        eggRemoved++;
+                        return false;
+                    }
+                    return true;
+                })
+                console.log(removeEgg2(foodsArray));
+                */
+
         //12g h i
+        /*
         let messages = 2;
         let intervalId;
         let notificationStatus;
 
         function countMessages() {
-            if(messages > 0) {
-        displayMessage();
-            } else{
-        stopNotification();
+            if (messages > 0) {
+                displayMessage();
+            } else {
+                stopNotification();
             }
         };
 
         countMessages();
 
         function displayMessage() {
-            if(notificationStatus) {
-            return;
+            if (notificationStatus) {
+                return;
             }
             notificationStatus = true;
-            intervalId = setInterval(function() {
-            if (document.title === 'App') {
-                document.title = `(${messages}) New messages`;
-            } else {
-                document.title = 'App';
-            }
-            },1000)
+            intervalId = setInterval(() => {
+                if (document.title === 'App') {
+                    document.title = `(${messages}) New messages`;
+                } else {
+                    document.title = 'App';
+                }
+            }, 1000)
         };
 
         function stopNotification() {
-        notificationStatus = false;
-        clearInterval(intervalId);
-        document.title = 'App';
+            notificationStatus = false;
+            clearInterval(intervalId);
+            document.title = 'App';
         }
+        //Changed event listeners from "onclick" to "addEventListener"
+        //                | |
+        //                | |
+        //                 V
+        const addMessageElement = document.querySelector('.js-add-button');
+        const removeButtonElement = document.querySelector('.js-remove-button');
+
+        addMessageElement.addEventListener('click', () => {
+            messages++;
+            countMessages();
+        });
+
+        removeButtonElement.addEventListener('click', () => {
+            if (messages > 0) { messages-- };
+            countMessages();
+        });
+        */
+
+
 
         //12a 12b
         /*
@@ -76,28 +135,54 @@
                 runTwice(add)
                 */
         // 12c d e f
-        /*
-                function changeStatus() {
-                    document.querySelector('.js-start-button').innerHTML = 'Loading...';
-                    setTimeout(function () {
-                        document.querySelector('.js-start-button').innerHTML = 'Finished';
-                    }, 1000)
-                }
-        
-                let myTimeout;
-                function addMessage() {
-        
-                    const messageElement = document.querySelector('.js-message');
-                    messageElement.innerHTML = 'Added';
-        
-                    clearTimeout(myTimeout);
-        
-                    myTimeout = setTimeout(function () {
-                        document.querySelector('.js-message').innerHTML = '';
-                    }, 2000);
-                }
-        */
-        
+/*
+        // function changeStatus() {
+        //     document.querySelector('.js-start-button').innerHTML = 'Loading...';
+        //     setTimeout(() => {
+        //         document.querySelector('.js-start-button').innerHTML = 'Finished';
+        //     }, 1000)
+        // }
+        //                | |
+        //                | |
+        //                 V
+
+        const startButtonElement = document.querySelector('.js-start-button');
+
+        startButtonElement.addEventListener('click', () => {
+            startButtonElement.innerHTML = 'Loading...';
+            setTimeout(() => {
+                startButtonElement.innerHTML = 'Finished';
+            }, 1000)
+        });
+
+        let myTimeout;
+
+        const messageElement = document.querySelector('.js-message');
+
+        // function addMessage() {
+        //     messageElement.innerHTML = 'Added';
+        //     clearTimeout(myTimeout);
+        //     myTimeout = setTimeout(() => {
+        //         document.querySelector('.js-message').innerHTML = '';
+        //     }, 2000);
+        // };
+        //                | |
+        //                | |
+        //                 V
+
+        const addCartElement = document.querySelector('.js-add-cart-button');
+
+        addCartElement.addEventListener('click', () => {
+            messageElement.innerHTML = 'Added';
+            clearTimeout(myTimeout);
+            myTimeout = setTimeout(() => {
+                messageElement.innerHTML = '';
+            }, 2000);
+        })
+*/
+
+
+
     </script>
 </body>
 
