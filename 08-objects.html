@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Objects</title>
 </head>
+
 <body>
     <script>
-        /*
+
         const product = {
             name: 'socks',
             price: 1090
         };
         console.log(typeof product);
-        console.log(product.name);
-        console.log(product.price);
+        //console.log(product.name);
+        //console.log(product.price);
 
         product.name = 'cotton socks';
         console.log(product);
@@ -22,11 +24,11 @@
 
         delete product.newProperty;
         console.log(product);
-        
+
         // Objects make our code more organized
         // Objects let us gruop multiple values together
         // Objects let us use multiple values together
-        */
+
 
 
         /*
@@ -83,78 +85,80 @@
         // Normally all variables are temporaty, if we refresh / close the page
         // all the variables are deleted
 */
-        console.log('hello'.length);
-        console.log('hello'.toUpperCase());
-
-        // Objects are references
+        /*
+                console.log('hello'.length);
+                console.log('hello'.toUpperCase());
         
-        const object1 = {
-            message: 'hello'
-        };
-        // here object1 is a reference to the location 
-        //in the computers memory, where exists the BOX
-        // with the information
-
-        const object2 = object1;
-        //here  we have a copy by reference
-
-        object1.message = 'Good job';
-        console.log(object1);
-        //we can not change the reference itself, 
-        // but we can change the property inside, even thuogh we use CONST
-
-        console.log(object2);
-
-        // we can`t compare objects directly
-        const object3 = {
-            message: 'Good job'
-        };
-
-        console.log(object3 === object1); // false, becouse different references
-
-        console.log(object2 === object1); // true, becouse they are the same references, as we made them above
-
-        // Comparing two variables that contain objects,
-        // we generally compare the references not the values inside
-
-        const object4 = {
-            message: 'Good job',
-            price: 799
-        };
-        //const message = object4.message;
-
-        // Destructuring shortcut
-        // an easier way to take properties out of an object
-        const { message, price } = object4;
-        console.log(message);
-        console.log(price);
-
-        //Shorthand property
-
-        const object5 = {
-            //message: message
-            // if the property and the variable
-            // are the same (message: message) we can type it out once:
-            message
-        };
-        console.log(object5);
-
-
-        // Shorthand Method
-
-        const object6 = {
-            message,
-            method: function function1() {
-                console.log(`method`);
-            },
-            //Shorthand method is:
-            method2 () {
-                console.log(`Shorthand method`);
-            }
-        };
-        console.log(object6);
-        object6.method();
-        object6.method2();
+                // Objects are references
+        
+                const object1 = {
+                    message: 'hello'
+                };
+                // here object1 is a reference to the location 
+                //in the computers memory, where exists the BOX
+                // with the information
+        
+                const object2 = object1;
+                //here  we have a copy by reference
+        
+                object1.message = 'Good job';
+                console.log(object1);
+                //we can not change the reference itself, 
+                // but we can change the property inside, even thuogh we use CONST
+        
+                console.log(object2);
+        
+                // we can`t compare objects directly
+                const object3 = {
+                    message: 'Good job'
+                };
+        
+                console.log(object3 === object1); // false, becouse different references
+        
+                console.log(object2 === object1); // true, becouse they are the same references, as we made them above
+        
+                // Comparing two variables that contain objects,
+                // we generally compare the references not the values inside
+        
+                const object4 = {
+                    message: 'Good job',
+                    price: 799
+                };
+                //const message = object4.message;
+        
+                // Destructuring shortcut
+                // an easier way to take properties out of an object
+                const { message, price } = object4;
+                console.log(message);
+                console.log(price);
+        
+                //Shorthand property
+        
+                const object5 = {
+                    //message: message
+                    // if the property and the variable
+                    // are the same (message: message) we can type it out once:
+                    message
+                };
+                console.log(object5);
+        
+        
+                // Shorthand Method
+        
+                const object6 = {
+                    message,
+                    method: function function1() {
+                        console.log(`method`);
+                    },
+                    //Shorthand method is:
+                    method2() {
+                        console.log(`Shorthand method`);
+                    }
+                };
+                console.log(object6);
+                object6.method();
+                object6.method2();
+                */
     </script>
 </body>
 

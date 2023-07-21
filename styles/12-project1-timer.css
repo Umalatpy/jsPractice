@@ -1,0 +1,59 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+.timer {
+    margin-left: 90px;
+    margin-bottom: 30px;
+    color: #0b9c2a;
+
+}
+.start-button,
+.stop-button,
+.reset-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: #145a1d;
+    background-color: #b2ccf1;
+    border: none;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    box-shadow: 5px 5px 5px #6389be;
+    margin-right: 10px;
+    transition: all ease 0.15s;
+}
+
+.start-button:active{
+    transform: translate(2px, 3px);
+    box-shadow: 2px 2px 2px #6389be;
+
+}
+.stop-button:focus{
+    transform: translate(2px, 3px);
+    box-shadow: 2px 2px 2px #6389be;
+}
+.reset-button:active{
+    transform: translate(2px, 3px);
+    box-shadow: 2px 2px 2px #6389be;
+}
+
+.display-time-m{
+    margin-left:80px;
+}
+
+.display-time-m,
+.display-time-s, 
+.display-time-ms {
+    font-size: 30px;
+    color: #0b9c2a;
+    margin-bottom: 20px;
+}
+
+.duration {
+    color: #0b9c2a;
+}

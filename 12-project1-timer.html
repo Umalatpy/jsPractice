@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TIMER</title>
+    <link rel="stylesheet" href="styles/12-project1-timer.css">
+</head>
+
+<body>
+    <div style="font-size: 20px;" class="timer">TIMER</div>
+    <button class="js-start-button start-button ">Start</button>
+    <button class="js-stop-button stop-button ">Stop</button>
+    <button class="js-reset-button reset-button">Reset</button>
+    <p></p>
+    <div style="display: inline-block;" class="js-display-time-m display-time-m">0</div>
+
+    <div style="display: inline-block;">.</div>
+
+    <div style="display: inline-block;" class="js-display-time-s display-time-s">0</div>
+
+    <div style="display: inline-block;">.</div>
+
+    <div style="display: inline-block;" class="js-display-time-ms display-time-ms">0</div>
+
+    <div class="js-duration duration"></div>
+
+    <script>
+        const startElem = document.querySelector('.js-start-button');
+        const stopElem = document.querySelector('.js-stop-button');
+        const resettElem = document.querySelector('.js-reset-button');
+        const timeElemMS = document.querySelector('.js-display-time-ms');
+        const timeElemS = document.querySelector('.js-display-time-s');
+        const timeElemM = document.querySelector('.js-display-time-m');
+
+        const durationElem = document.querySelector('.js-duration');
+
+        let durationHTML = durationElem.innerHTML;
+        let timeMS = '0';
+        let timeS = '0';
+        let timeM = '0';
+        let isStarted = false;
+        let timerResultsArray = [];
+        let resArray = { newtext: '' };
+
+
+        startElem.addEventListener('click', () => {
+            if (!isStarted) {
+                intervalSeconds = setInterval(() => {
+                    timeMS++;
+                    while (timeMS === 100) {
+                        timeMS = 1;
+                        timeS++;
+                        timeElemS.innerHTML = timeS;
+                    }
+                    while (timeS === 60) {
+                        timeS = 1;
+                        timeM++;
+                        timeElemM.innerHTML = timeM;
+                    }
+                    timeElemMS.innerHTML = timeMS;
+                    isStarted = true;
+                }, 10)
+            }
+        });
+
+        stopElem.addEventListener('click', () => {
+            let newHTML = '';
+            let element = '';
+            if (isStarted) {
+                clearInterval(intervalSeconds);
+                isStarted = false;
+                newHTML = `<div> Timer duration is ${timeM} min ${timeS} sec ${timeMS} ms </div>`;
+                timerResultsArray.push(newHTML);
+                timerResultsArray.reverse();
+            }
+            durationElem.innerHTML = timerResultsArray
+            timerResultsArray.reverse();
+        });
+
+        resettElem.addEventListener('click', () => {
+            clearInterval(intervalSeconds);
+            isStarted = false;
+            durationElem.innerHTML = `Last Timer duration is ${timeM} min ${timeS} sec ${timeMS} ms`;
+            timeMS = '0';
+            timeS = '0';
+            timeM = '0';
+            timerResultsArray = [];
+            timeElemMS.innerHTML = '0';
+            timeElemS.innerHTML = '0';
+            timeElemM.innerHTML = '0';
+        })
+    </script>
+
+</body>
+
+</html>
