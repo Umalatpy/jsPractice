@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays Exercise</title>
+</head>
+
+<body onload="scrollAfter100();" style="background-color: darkcyan;">
+    <h1>Arrays: exercise solutions</h1>
+    <div class="text one-more-class">Lorem ipsum dolor sit amet consectetur adipisicing.</div>
+
+    <div data-say-hi='yes'>Hiiiiii</div>
+    <ul>
+        <li>korji</li>
+        <li>yonji</li>
+    </ul>
+    <button class="my-button">Click me</button>
+
+    <div class="like"></div>
+    <div class="subscribe"></div>
+    <div class="like subscribe"></div>
+    <textarea style="display: block;" name="text-area" id="text-area1" cols="30"
+        rows="10"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex nostrum obcaecati rem voluptatibus numquam. Officiis nobis sapiente labore ab. Alias adipisci architecto vitae fuga, unde officia? Ut laboriosam, ad eius voluptatibus voluptatum ratione beatae amet reiciendis in nesciunt facilis sed ipsam. Nostrum, nihil! Facilis, laudantium, nobis eveniet illo minus commodi quidem explicabo laborum quibusdam tempore fugiat repellendus, eaque ad dolorum. Minus debitis deleniti quae est dolorum assumenda. Sint vero soluta quia corporis veritatis exercitationem quaerat debitis assumenda. Itaque nemo repellat ex explicabo dolorum corrupti. Quam aut inventore officiis tenetur animi maiores! Eum doloremque numquam, accusantium voluptatem optio sint amet minima.</textarea>
+
+    <textarea name="" id="text-area2" cols="30"
+        rows="100"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, voluptatem? Cupiditate soluta illum animi autem, optio voluptatum placeat laudantium, laborum, aliquam consequatur atque eaque voluptatem voluptas ut et? Error delectus voluptatibus nisi voluptatem praesentium iure aspernatur esse earum voluptatum quibusdam soluta corporis ipsam, id eaque quisquam odit laborum molestiae sint? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem molestias deserunt quia minus, libero beatae esse impedit animi cum quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, repellendus.</textarea>
+
+    <script>
+        const buttonElem = document.querySelector('.my-button');
+        const mainPage = document.documentElement;
+        const mainPageWidth = mainPage.clientWidth;
+        const windowWidth = window.innerWidth;
+        const scrollWidth = windowWidth - mainPageWidth;
+        //console.log(mainPageWidth);
+        //console.log(windowWidth);
+        //console.log(scrollWidth);
+
+        // function clickMe() {
+        //     console.log('clicked');
+        // }
+        // buttonElem.onclick = clickMe;
+
+        buttonElem.addEventListener('click', () => {
+            console.log('click');
+        });
+        buttonElem.addEventListener('click', () => {
+            console.log('clack');
+        })
+
+        const windowScrolledFromTop = window.pageYOffset;
+        //console.log(windowScrolledFromTop);
+
+        function scrollAfter100() {
+            setTimeout(() => {
+                window.scrollBy(0, 100);
+            }, 1000);
+        };
+
+        const textArea1Elem = document.getElementById('text-area1');
+
+        //console.log(textArea1Elem.offsetHeight);
+        //console.log(textArea1Elem.offsetWidth);
+
+        console.log(textArea1Elem.getBoundingClientRect());
+
+
+
+
+
+
+
+        const textElement = document.querySelector('.text');
+        const inTextElement = textElement.innerHTML;
+
+        textElement.innerHTML = `${inTextElement} SOME MORE TEXT `;
+        //console.log(inTextElement);
+        //console.log(textElement.innerHTML);
+
+        textElement.classList.add('new-class-from-js')
+
+        textElement.classList.forEach((className) => {
+            console.log(className);
+        });
+
+        //Z1
+        const sayHiEl = document.getElementsByTagName('div');
+        console.log(sayHiEl);
+        console.log(sayHiEl[1].dataset.sayHi);
+        //z2
+        const liEls = document.querySelectorAll('li');
+        const yonjiEl = liEls[1];
+        console.log(yonjiEl);
+        console.log(yonjiEl.innerHTML);
+        //z3
+        const likeElem = document.getElementsByClassName('like');
+        console.log(likeElem);
+        //z4
+        //done
+
+
+
+
+
+        let arr = ['Van', 'Ban', 'Fan'];
+        let newArr = arr;
+        newArr.push('Pan');
+        //console.log(arr.length);
+        let users = arr.slice(0, 2);
+        //console.log(users);
+        users.push('Oly');
+        //console.log(users);
+        users[1] = 'Pan';
+        //console.log(users);
+
+        let newUser = users.find(item => item === 'Pan');
+        newUser = newUser.split();
+        newUser.push('Lily');
+        //console.log(newUser);
+        //console.log(typeof (newUser));
+        newUser.unshift('Mas', 'Pas');
+        //console.log(newUser);
+
+        let per = arr.find(item => item === 'Ban');
+        //console.log(per);
+        //console.log(arr);
+
+        let arr2 = arr.slice(1, 2);
+        //console.log(arr2);
+        let string1 = 'dog,cat,mouse';
+        let arr3 = string1.split(',');
+        //console.log(arr3);
+
+        let arr4 = [9, 2, 8];
+        let reduceValue = arr4.reduce(function (previousValue, item, index, array) {
+            //console.log(previousValue);
+            return previousValue + item;
+        });
+        //console.log(reduceValue);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        let arr6 = ['baba', 'iba', 'oba'];
+        let newArr6 = arr6;
+        newArr6.push('poba');
+        //console.log(newArr6);
+        newArr6.pop();
+        //console.log(newArr6);
+        newArr6.shift();
+        //console.log(newArr6);
+        newArr6.unshift('mama');
+        //console.log(newArr6);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
